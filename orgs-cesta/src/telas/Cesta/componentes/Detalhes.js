@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Image , StyleSheet, ViewBase } from "react-native";
+import { View, Image , StyleSheet, TouchableOpacity } from "react-native";
 
 import logo from '../../../../assets/logo.png'
 
 import Texto from "../../../componentes/Texto";
-export default function Detalhes ({nome,logoFazenda,nomeFazenda, descricao, preco}){
+import Botao from "../../../componentes/Botao";
+export default function Detalhes ({nome,logoFazenda,nomeFazenda, descricao, preco,botao}){
     return <>
         <Texto style={estilos.nomme}>{nome}</Texto>
         <View style={estilos.fazenda}>
@@ -14,6 +15,7 @@ export default function Detalhes ({nome,logoFazenda,nomeFazenda, descricao, prec
        
         <Texto style={estilos.descricao}>{descricao} </Texto>
         <Texto style={estilos.preco}>{preco}</Texto>
+        <Botao title={botao}/>
     </>
 }
 const estilos = StyleSheet.create({
